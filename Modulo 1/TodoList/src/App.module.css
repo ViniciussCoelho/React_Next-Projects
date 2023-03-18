@@ -1,0 +1,44 @@
+.container {
+    max-width: 48rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+    margin-top: 8rem;
+}
+
+.label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+
+    font-size: 0.875rem;
+}
+
+.label > * {
+    display: flex;
+    align-items: center;
+}
+
+.label p {
+    padding: 0.125rem .5rem;
+    background-color: var(--gray-500);
+    border-radius: 999px;
+    color: var(--gray-200);
+    font-size: 0.75rem;
+
+}
+.created h2 {
+    color: var(--blue);
+    margin-right: 0.5rem;
+}
+
+.concluded h2 {
+    color: var(--purple);
+    margin-right: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 70.5%;
+    }
+}
