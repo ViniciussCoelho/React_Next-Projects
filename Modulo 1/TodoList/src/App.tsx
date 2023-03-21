@@ -10,15 +10,25 @@ function App() {
       id: 1,
       title: 'Lorem ipsum dolor sit amet.',
       isCompleted: false
-    },])
+    },
+  ])
 
-    function handleDelete(id: number) {
-      setTodos(todos.filter(todo => todo.id !== id))
+  const handleDelete = (id: number) => {
+    setTodos(todos.filter((todo) => todo.id !== id))
+  }
+
+  const handleCreateTodo = (newTodoTitle: string) => {
+    const newTodo = {
+      id: todos.length + 1,
+      title: newTodoTitle,
+      isCompleted: false
     }
+    setTodos([...todos, newTodo])
+  }
 
   return (
     <div>
-      <Top />
+      <Top handleCreateTodo={handleCreateTodo} />
       <div className={styles.container}>
         <div className={styles.label}>
           <div className={styles.created}>

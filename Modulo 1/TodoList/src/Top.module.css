@@ -21,6 +21,7 @@
   width: 39.875rem;
   height: 3.375rem;
   padding: 0 1rem;
+  color: var(--gray-100);
 
   margin-right: 0.5rem;
 
@@ -42,6 +43,7 @@
   font-weight: 700;
   color: var(--gray-100);
   text-align: center;
+  cursor: pointer;
 
   display: flex;
   align-items: center;
@@ -54,6 +56,17 @@
   margin-left: 0.5rem;
 }
 
-.form button:hover {
-  opacity: 0.8;
+.form button:active {
+  animation-name: button-click;
+  animation-duration: 0.2s;
+}
+
+@keyframes button-click {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(0.95);
+  }
 }
